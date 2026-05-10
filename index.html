@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashboard Responsive</title>
+    <title>Dashboard Auto-Fit</title>
     <style>
         body { 
             font-family: -apple-system, sans-serif; 
@@ -12,10 +12,7 @@
             padding: 10px;
         }
 
-        .container { 
-            max-width: 100%; /* Occupa tutto lo spazio */
-            margin: 0 auto; 
-        }
+        .container { max-width: 100%; margin: 0 auto; }
 
         .main-title {
             text-align: center;
@@ -32,7 +29,7 @@
             margin-bottom: 20px; 
             padding: 12px;
             border: 1px solid #e1e4e8;
-            overflow: hidden; /* Taglia ciò che esce dai bordi arrotondati */
+            overflow: hidden; /* Taglia ciò che esce */
         }
 
         h2 { 
@@ -43,20 +40,37 @@
             border-bottom: 1px solid #f0f2f5;
         }
 
-        /* CONTENITORE FLESSIBILE */
+        /* IL TRUCCO DELLO ZOOM (SCALE) */
         .chart-wrapper { 
             width: 100%; 
-            overflow-x: auto; /* Se il grafico è testardo e non si stringe, potrai comunque scorrerlo */
-            display: block;
+            position: relative;
+            overflow: hidden;
+            /* Altezza fissa per mobile */
+            height: 260px; 
         }
 
         iframe { 
             border: none; 
-            width: 100% !important; /* Forza il grafico a stringersi al 100% della card */
-            height: 350px; /* Altezza ottimale per iPhone */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Carichiamo il grafico al 160% della dimensione e poi lo rimpiccioliamo */
+            width: 165% !important; 
+            height: 165% !important;
+            transform: scale(0.60); /* Rimpicciolisce al 60% per farlo stare nel display */
+            transform-origin: 0 0;
             display: block;
         }
 
+        /* Se il display è più grande (Tablet o Computer), togliamo lo zoom */
+        @media (min-width: 600px) {
+            .chart-wrapper { height: 400px; }
+            iframe { 
+                width: 100% !important; 
+                height: 100% !important;
+                transform: scale(1); 
+            }
+        }
     </style>
 </head>
 <body>
@@ -109,4 +123,60 @@
     <div class="card">
         <h2>7. Report</h2>
         <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7V
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1769060619&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>8. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=2062895456&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>9. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1691772617&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>10. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1574489078&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>11. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=758127564&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>12. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=425731966&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>13. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=378457555&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>14. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=876521943&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
