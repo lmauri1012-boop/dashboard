@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Completa (14 Report)</title>
-    <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f0f2f5; margin: 0; padding: 10px; display: flex; flex-direction: column; gap: 15px; }
-        .card { background: white; border-radius: 12px; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { font-size: 0.9rem; color: #555; margin: 0 0 10px 0; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .chart-frame { width: 100%; height: 300px; border: none; }
-    </style>
+ <style>
+    /* Sfondo e font */
+    body { 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+        background-color: #f0f2f5; 
+        margin: 0; 
+        padding: 10px; /* Un po' di respiro ai bordi */
+    }
+
+    /* Contenitore principale che centra tutto */
+    .container { 
+        width: 100%;
+        max-width: 1200px; /* Non diventa troppo largo sui monitor grandi */
+        margin: 0 auto; 
+    }
+
+    /* La "card" che contiene il grafico */
+    .card { 
+        background: white; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        margin-bottom: 20px; 
+        padding: 15px;
+        box-sizing: border-box; /* Importante per non farlo uscire dai bordi */
+    }
+
+    h2 { 
+        color: #1a73e8; 
+        font-size: 1.1rem; 
+        margin-top: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    /* IL SEGRETO DELLA RESPONSIVITÀ */
+    iframe { 
+        width: 100% !important; /* Forza il grafico a stare dentro la card */
+        height: 400px; /* Altezza fissa comoda per il telefono */
+        border: none;
+    }
+</style>
 </head>
 <body>
 
