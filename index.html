@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashboard Analisi</title>
+    <title>Dashboard Analisi Completa</title>
     <style>
         body { 
             font-family: -apple-system, sans-serif; 
@@ -11,9 +11,7 @@
             margin: 0; 
             padding: 10px;
         }
-
         .container { max-width: 100%; margin: 0 auto; }
-
         .main-title {
             text-align: center;
             color: #1a73e8;
@@ -21,25 +19,21 @@
             font-size: 1.3rem;
             font-weight: bold;
         }
-
         .card { 
             background: white; 
             border-radius: 12px; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
             margin-bottom: 20px; 
-            padding: 10px; /* Ridotto il padding visto che non c'è più il titolo */
+            padding: 10px; 
             border: 1px solid #e1e4e8;
             overflow: hidden;
         }
-
-        /* IL TRUCCO DELLO ZOOM (SCALE) */
         .chart-wrapper { 
             width: 100%; 
             position: relative;
             overflow: hidden;
-            height: 260px; /* Altezza per mobile */
+            height: 260px; 
         }
-
         iframe { 
             border: none; 
             position: absolute;
@@ -51,8 +45,6 @@
             transform-origin: 0 0;
             display: block;
         }
-
-        /* Se il display è più grande (Tablet o Computer), togliamo lo zoom */
         @media (min-width: 600px) {
             .chart-wrapper { height: 400px; }
             iframe { 
@@ -66,26 +58,37 @@
 <body>
 
 <div class="container">
-    <div class="main-title">Dashboard Report</div>
+    <div class="main-title">Dashboard Report - Fondazione ITSAR</div>
 
-    <div class="card">
-        <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1320636500&amp;format=interactive"></iframe>
-        </div>
-    </div>
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1320636500&amp;format=interactive"></iframe></div></div>
 
-    <div class="card">
-        <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=945413719&amp;format=interactive"></iframe>
-        </div>
-    </div>
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=945413719&amp;format=interactive"></iframe></div></div>
 
-    <div class="card">
-        <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=601303332&amp;format=interactive"></iframe>
-        </div>
-    </div>
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=601303332&amp;format=interactive"></iframe></div></div>
 
-    <div class="card">
-        <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=31
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=31792313&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1658917696&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1449406048&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1769060619&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=2062895456&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1691772617&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1574489078&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=758127564&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=425731966&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=378457555&amp;format=interactive"></iframe></div></div>
+
+    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=876521943&amp;format=interactive"></iframe></div></div>
+
+</div>
+
+</body>
+</html>
