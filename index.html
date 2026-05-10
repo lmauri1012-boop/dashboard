@@ -3,112 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashboard Professionale</title>
+    <title>Dashboard Responsive</title>
     <style>
-        /* Base e Sfondo */
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            font-family: -apple-system, sans-serif; 
             background-color: #f4f7f9; 
             margin: 0; 
-            padding: 15px;
-            color: #333;
+            padding: 10px;
         }
 
-        /* Contenitore centrato */
         .container { 
-            max-width: 900px; 
+            max-width: 100%; /* Occupa tutto lo spazio */
             margin: 0 auto; 
         }
 
-        /* Titolo della Dashboard */
         .main-title {
             text-align: center;
             color: #1a73e8;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
+            margin: 15px 0;
+            font-size: 1.3rem;
             font-weight: bold;
         }
 
-        /* Card dei grafici */
         .card { 
             background: white; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
-            margin-bottom: 25px; 
-            padding: 18px;
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            margin-bottom: 20px; 
+            padding: 12px;
             border: 1px solid #e1e4e8;
-            overflow: hidden;
+            overflow: hidden; /* Taglia ciò che esce dai bordi arrotondati */
         }
 
         h2 { 
             color: #1a73e8; 
-            font-size: 1.1rem; 
-            margin: 0 0 15px 0;
-            padding-bottom: 12px;
+            font-size: 1rem; 
+            margin: 0 0 10px 0;
+            padding-bottom: 8px;
             border-bottom: 1px solid #f0f2f5;
         }
 
-        /* IL TRUCCO PER LO SCORRIMENTO LATERALE */
+        /* CONTENITORE FLESSIBILE */
         .chart-wrapper { 
             width: 100%; 
-            overflow-x: auto; /* Permette lo scroll orizzontale */
-            -webkit-overflow-scrolling: touch; /* Rende lo scroll fluido su iPhone */
-            border-radius: 8px;
+            overflow-x: auto; /* Se il grafico è testardo e non si stringe, potrai comunque scorrerlo */
+            display: block;
         }
 
         iframe { 
             border: none; 
-            width: 100%; 
-            min-width: 600px; /* Forza il grafico a non restringersi troppo */
-            height: 400px; 
+            width: 100% !important; /* Forza il grafico a stringersi al 100% della card */
+            height: 350px; /* Altezza ottimale per iPhone */
             display: block;
         }
 
-        /* Messaggio di aiuto per l'utente */
-        .scroll-hint {
-            font-size: 0.8rem;
-            color: #999;
-            text-align: right;
-            margin-top: 5px;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="main-title">Report Dashboard</div>
+    <div class="main-title">Dashboard Analisi</div>
 
     <div class="card">
-        <h2>1. Report Analisi</h2>
+        <h2>1. Report</h2>
         <div class="chart-wrapper">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1320636500&amp;format=interactive"></iframe>
         </div>
-        <div class="scroll-hint">Scorri lateralmente per vedere tutto →</div>
     </div>
 
     <div class="card">
-        <h2>2. Report Analisi</h2>
+        <h2>2. Report</h2>
         <div class="chart-wrapper">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=945413719&amp;format=interactive"></iframe>
         </div>
     </div>
 
     <div class="card">
-        <h2>3. Report Analisi</h2>
+        <h2>3. Report</h2>
         <div class="chart-wrapper">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=601303332&amp;format=interactive"></iframe>
         </div>
     </div>
 
     <div class="card">
-        <h2>4. Report Analisi</h2>
+        <h2>4. Report</h2>
         <div class="chart-wrapper">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=31792313&amp;format=interactive"></iframe>
         </div>
     </div>
 
     <div class="card">
-        <h2>5. Report Analisi</h2>
+        <h2>5. Report</h2>
         <div class="chart-wrapper">
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=165
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1658917696&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>6. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1449406048&amp;format=interactive"></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>7. Report</h2>
+        <div class="chart-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7V
