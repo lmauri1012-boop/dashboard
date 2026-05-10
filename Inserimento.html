@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Segreteria ITSAR</title>
     <style>
-        /* Mantengo il tuo stile originale con qualche piccolo ritocco per la password */
         body { font-family: 'Helvetica Neue', sans-serif; padding: 20px; background: #f0f2f5; }
         .form-container { background: white; padding: 30px; border-radius: 12px; max-width: 600px; margin: auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         label { font-weight: bold; display: block; margin-top: 15px; color: #444; }
@@ -13,83 +12,92 @@
         .section-title { border-bottom: 2px solid #004a99; color: #004a99; padding-bottom: 5px; margin-bottom: 20px; }
         button { background: #004a99; color: white; font-weight: bold; border: none; cursor: pointer; margin-top: 25px; }
         button:disabled { background: #ccc; }
-        .pw-section { background: #fff9c4; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #fbc02d; }
+        
+        /* SEZIONE LOGIN GIALLA */
+        #loginBox { text-align: center; padding: 20px; background: #fff9c4; border-radius: 10px; border: 1px solid #fbc02d; }
+        
+        /* NASCONDIAMO IL MODULO ALL'INIZIO */
+        #moduloSegreteria { display: none; }
     </style>
 </head>
 <body>
 
 <div class="form-container">
-    <h2 class="section-title">✏️ Registro Segreteria ITSAR</h2>
     
-    <div class="pw-section">
-        <label style="margin-top:0">Password di Sicurezza</label>
-        <input type="password" id="userPassword" placeholder="Inserisci drago2026curioso" required>
+    <div id="loginBox">
+        <h2 class="section-title">🔐 Accesso Riservato</h2>
+        <p>Inserisci la password per sbloccare il registro:</p>
+        <input type="password" id="passInput" placeholder="Password...">
+        <button onclick="sblocca()">SBLOCCA MODULO</button>
+        <p id="err" style="color:red; display:none; margin-top:10px;">Password Errata!</p>
     </div>
 
-    <form id="segreteriaForm">
-        <label>ID o Nome Socio (Identificativo Azienda)</label>
-        <input type="text" id="ragioneSociale" name="ragioneSociale" placeholder="Identificare l'azienda..." required>
+    <div id="moduloSegreteria">
+        <h2 class="section-title">✏️ Registro Segreteria ITSAR</h2>
+        <form id="segreteriaForm">
+            <label>ID o Nome Socio (Azienda)</label>
+            <input type="text" id="ragioneSociale" required>
 
-        <label>Tipologia Socio</label>
-        <select id="tipologiaSocio" name="tipologiaSocio" required>
-            <option value="Socio Partecipante">Socio Partecipante</option>
-            <option value="Socio Generico">Socio Generico</option>
-            <option value="Progetti Speciali">Progetti Speciali</option>
-        </select>
+            <label>Tipologia Socio</label>
+            <select id="tipologiaSocio" required>
+                <option value="Socio Partecipante">Socio Partecipante</option>
+                <option value="Socio Generico">Socio Generico</option>
+                <option value="Progetti Speciali">Progetti Speciali</option>
+            </select>
 
-        <label>Data ingresso in ITSAR (Ammissione CdA)</label>
-        <input type="date" id="dataIngresso" name="dataIngresso" required>
+            <label>Data ingresso in ITSAR</label>
+            <input type="date" id="dataIngresso" required>
 
-        <label>Data Invio PEC Ammissione</label>
-        <input type="date" id="dataInvioPec" name="dataInvioPec">
+            <label>Data Invio PEC Ammissione</label>
+            <input type="date" id="dataInvioPec">
 
-        <label>Gestione Solleciti (30/60 gg)</label>
-        <div style="display: flex; gap: 10px;">
-            <div style="flex: 1;">
-                <span style="font-size: 0.8rem;">1° Sollecito</span>
-                <input type="date" id="dataPrimoSollecito" name="dataPrimoSollecito">
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label>1° Sollecito</label>
+                    <input type="date" id="dataPrimoSollecito">
+                </div>
+                <div style="flex: 1;">
+                    <label>2° Sollecito</label>
+                    <input type="date" id="dataSecondoSollecito">
+                </div>
             </div>
-            <div style="flex: 1;">
-                <span style="font-size: 0.8rem;">2° Sollecito</span>
-                <input type="date" id="dataSecondoSollecito" name="dataSecondoSollecito">
-            </div>
-        </div>
 
-        <label>Note Segreteria</label>
-        <textarea id="noteSegreteria" name="noteSegreteria" rows="3"></textarea>
+            <label>Note Segreteria</label>
+            <textarea id="noteSegreteria" rows="3"></textarea>
 
-        <button type="submit" id="submitBtn">Aggiorna Registro Soci</button>
-    </form>
-    <div id="msg" style="text-align:center; margin-top:15px; font-weight:bold;"></div>
+            <button type="submit" id="submitBtn">SALVA NEL DATABASE</button>
+        </form>
+        <div id="msg" style="text-align:center; margin-top:15px; font-weight:bold;"></div>
+    </div>
 </div>
 
 <script>
-    // 1. INCOLLA QUI IL TUO NUOVO URL COPIATO (quello che finisce con /exec)
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUUsvVgicJXa23k2c63KhGiIPH0hWCoI5xI4rJi4FS_PdxijU1TTx1C9tbSCHWV3XTXw/exec'; 
-    
-    // 2. LA PASSWORD CHE ABBIAMO SCELTO
+    // --- IL TUO URL DI GOOGLE (COPIALO DALLA RIGA 68 DEL TUO SCREENSHOT) ---
+    const scriptURL = 'INCOLLA_QUI_IL_TUO_URL_DI_GOOGLE'; 
     const PWD_SITO = "drago2026curioso";
 
-    const form = document.getElementById('segreteriaForm');
-    const msg = document.getElementById('msg');
+    // Funzione che sblocca il modulo e nasconde il login
+    function sblocca() {
+        const input = document.getElementById('passInput').value;
+        if(input === PWD_SITO) {
+            document.getElementById('loginBox').style.display = 'none'; // Nasconde login
+            document.getElementById('moduloSegreteria').style.display = 'block'; // Mostra modulo
+        } else {
+            document.getElementById('err').style.display = 'block';
+        }
+    }
 
+    const form = document.getElementById('segreteriaForm');
     form.addEventListener('submit', e => {
         e.preventDefault();
-        
-        // Verifica Password
-        const pw = document.getElementById('userPassword').value;
-        if(pw !== PWD_SITO) {
-            alert("Password Errata!");
-            return;
-        }
-
         const btn = document.getElementById('submitBtn');
-        btn.disabled = true;
-        msg.innerText = "Salvataggio in corso...";
+        const msg = document.getElementById('msg');
         
-        // Prepariamo i dati aggiungendo il TOKEN per il ponte Google
+        btn.disabled = true;
+        msg.innerText = "⏳ Invio in corso...";
+        
         const data = {
-            token: "ITSAR_PROTETTO_2024", // Questa sblocca il ponte
+            token: "ITSAR_PROTETTO_2024",
             azienda: document.getElementById('ragioneSociale').value,
             tipoSocio: document.getElementById('tipologiaSocio').value,
             dataIngresso: document.getElementById('dataIngresso').value,
@@ -106,17 +114,14 @@
         })
         .then(() => {
             msg.style.color = "green";
-            msg.innerText = "✅ Dati inviati con successo!";
+            msg.innerText = "✅ Dati registrati correttamente!";
             form.reset();
-            document.getElementById('userPassword').value = "";
+            btn.disabled = false;
         })
         .catch(error => {
             msg.style.color = "red";
-            msg.innerText = "❌ Errore: " + error.message;
-        })
-        .finally(() => {
+            msg.innerText = "❌ Errore durante l'invio.";
             btn.disabled = false;
-            btn.innerText = "Aggiorna Registro Soci";
         });
     });
 </script>
