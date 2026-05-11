@@ -29,7 +29,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
             width: 100%;
         }
@@ -41,10 +41,11 @@
             padding: 10px; 
             border: 1px solid #e1e4e8;
             width: 100%;
+            overflow: hidden;
         }
 
         .chart-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: bold;
             color: #555;
             margin-bottom: 8px;
@@ -53,26 +54,29 @@
             padding-left: 8px;
         }
 
+        /* CORNICE: più stretta per bloccare il grafico */
         .chart-wrapper { 
             width: 100%; 
-            height: 250px; 
+            height: 220px; /* Un po' più basso per il mobile */
             position: relative;
             overflow: hidden; 
             background: #fff;
         }
 
+        /* IFRAME: Zoom all'indietro più potente */
         iframe { 
             border: none; 
             position: absolute;
             top: 0;
             left: 0;
-            width: 140% !important; 
-            height: 140% !important;
-            transform: scale(0.71); 
+            width: 180% !important; /* Molto più largo virtualmente */
+            height: 180% !important;
+            transform: scale(0.55); /* Rimpicciolito molto di più */
             transform-origin: 0 0;
             display: block;
         }
 
+        /* Su schermi grandi (PC) torniamo alla visione normale */
         @media (min-width: 800px) {
             .chart-wrapper { height: 350px; }
             iframe { 
