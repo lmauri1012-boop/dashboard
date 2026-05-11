@@ -3,91 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashboard Analisi Completa</title>
+    <title>Dashboard Analisi Fondazione ITSAR</title>
     <style>
         body { 
-            font-family: -apple-system, sans-serif; 
-            background-color: #f4f7f9; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #f0f2f5; 
             margin: 0; 
-            padding: 10px;
+            padding: 15px;
+            color: #1c1e21;
         }
-        .container { max-width: 100%; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; }
         .main-title {
             text-align: center;
-            color: #1a73e8;
-            margin: 15px 0;
-            font-size: 1.3rem;
-            font-weight: bold;
+            color: #004a99;
+            margin: 20px 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
         }
         .card { 
             background: white; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-            margin-bottom: 20px; 
-            padding: 10px; 
+            border-radius: 16px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            padding: 15px; 
             border: 1px solid #e1e4e8;
-            overflow: hidden;
+            transition: transform 0.2s;
         }
+        .card:hover { transform: translateY(-5px); }
         .chart-wrapper { 
             width: 100%; 
+            height: 300px; 
             position: relative;
             overflow: hidden;
-            height: 260px; 
+            border-radius: 8px;
         }
         iframe { 
             border: none; 
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 165% !important; 
-            height: 165% !important;
-            transform: scale(0.60); 
-            transform-origin: 0 0;
+            width: 100%; 
+            height: 100%;
             display: block;
         }
-        @media (min-width: 600px) {
-            .chart-wrapper { height: 400px; }
-            iframe { 
-                width: 100% !important; 
-                height: 100% !important;
-                transform: scale(1); 
-            }
+        .chart-label {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+            border-left: 4px solid #004a99;
+            padding-left: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="main-title">Dashboard Report - Fondazione ITSAR</div>
+    <div class="main-title">📊 Analisi Dati Fondazione ITSAR</div>
 
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1320636500&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=945413719&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=601303332&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=31792313&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1658917696&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1449406048&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1769060619&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=2062895456&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1691772617&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1574489078&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=758127564&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=425731966&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=378457555&amp;format=interactive"></iframe></div></div>
-
-    <div class="card"><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=876521943&amp;format=interactive"></iframe></div></div>
-
+    <div class="grid">
+        <div class="card"><span class="chart-label">Report 1</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1320636500&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 2</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=945413719&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 3</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=601303332&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 4</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=31792313&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 5</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1658917696&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 6</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1449406048&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 7</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1769060619&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 8</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=2062895456&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 9</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1691772617&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 10</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1574489078&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 11</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=758127564&format=interactive"></iframe></div></div>
+        <div class="card"><span class="chart-label">Report 12</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=425731966&format=interactive"></iframe></div></div>
+        
+        <div class="card"><span class="chart-label">Report 13</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=1410924985&format=interactive"></iframe></div></div>
+        
+        <div class="card"><span class="chart-label">Report 14</span><div class="chart-wrapper"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSfJ7h4R1O1c2jq-4nK6CbiAK-HdpedBHyDar-4tWG8KM2oXs7e7VwoleR15JoYsh6V0DBs-kMAxf1Y/pubchart?oid=876521943&format=interactive"></iframe></div></div>
+    </div>
 </div>
 
 </body>
